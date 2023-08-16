@@ -137,3 +137,27 @@ PRODUCT_PACKAGES += \
 # Call proprietary blob setup
 $(call inherit-product-if-exists, vendor/xiaomi/certus64/certus64-vendor.mk)
 $(call inherit-product-if-exists, vendor/xiaomi/mt6765-common/mt6765-common-vendor.mk)
+
+MINIMEDIA_SENSORSERVER_DISABLE := 1 
+
+PRODUCT_PACKAGES += \
+    libmedia_omx \ 
+    android.frameworks.displayservice@1.0 
+
+PRODUCT_PACKAGES += \ 
+    libion \ 
+    libmedia_compat_layer \ 
+    libsf_compat_layer \ 
+    libui_compat_layer 
+
+# SalifishOS droidmedia 
+PRODUCT_PACKAGES += \ 
+    libdroidmedia \ 
+    minimediaservice \ 
+    minisfservice \ 
+    miniafservice 
+
+# Ubuntu 
+PRODUCT_PACKAGES += \ 
+    libbiometry_fp_api \ 
+    libubuntu_application_api
